@@ -7,18 +7,20 @@ The client connects to the server at which point the server initiates the knock 
 
 #### Build & Run server
 
+```
 cd server
 
 mvn package
 
 java -cp target/server-1.0-SNAPSHOT.jar KnockKnockProtocol 4444
-
+```
 
 #### Build & Run client
 
+```
 cd client
 
 mvn package
 
 java -cp target/client-1.0-SNAPSHOT.jar KnockKnockClient 127.0.0.1 4444
-
+```
