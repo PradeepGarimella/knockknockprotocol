@@ -5,7 +5,7 @@ The server code attaches a socket to a specified port and waits for an incoming 
 
 The client connects to the server at which point the server initiates the knock knock joke.
 
-== Build & Run server ==
+#### Build & Run server
 
 cd server
 
@@ -14,7 +14,7 @@ mvn package
 java -cp target/server-1.0-SNAPSHOT.jar KnockKnockProtocol 4444
 
 
-== Build & Run client ==
+#### Build & Run client
 
 cd client
 
