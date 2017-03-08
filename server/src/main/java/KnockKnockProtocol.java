@@ -1,8 +1,5 @@
 
-import java.net.*;
-import java.io.*;
-
-public class KnockKnockProtocol {
+ public class KnockKnockProtocol {
     private static final int WAITING = 0;
     private static final int SENTKNOCKKNOCK = 1;
     private static final int SENTCLUE = 2;

@@ -13,8 +13,12 @@ public class KnockKnockServer {
         int portNumber = Integer.parseInt(args[0]);
 
         try (
+                // Initilization will fail if port is already being used
                 ServerSocket serverSocket = new ServerSocket(portNumber);
+                // This .accept is a waiting call, i.e it waits until a request comes
                 Socket clientSocket = serverSocket.accept();
+
+
                 PrintWriter out =
                         new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(
@@ -23,7 +27,7 @@ public class KnockKnockServer {
 
             String inputLine, outputLine;
 
-            // Initiate conversation with client
+            // Initiate conversation with client i.e say "knock!knock!"
             KnockKnockProtocol kkp = new KnockKnockProtocol();
             outputLine = kkp.processInput(null);
             out.println(outputLine);
