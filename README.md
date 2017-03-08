@@ -24,3 +24,10 @@ mvn package
 
 java -cp target/client-1.0-SNAPSHOT.jar KnockKnockClient 127.0.0.1 4444
 ```
+
+#### Key Definitions
+Port numbers range from 0 to 65535 because ports are 16 bit ints. The port numbers from 0 - 1023 are reserved
+
+A socket is a one endpoint of a two way communication between two programs running on the network. Generally speaking, an application binds itself to a port through a socket.
+
+An endpoint is an IP address and a port number. Every TCP connection can be identified by two ports
